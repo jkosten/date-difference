@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class DateDifference
+    {
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter first date (mm/dd/yyyy): ");
+
+            string dateOne = Console.ReadLine();
+
+            DateTime firstDate = DateTime.Parse(dateOne);
+
+
+
+            Console.WriteLine("Please enter second date (mm/dd/yyyy): ");
+
+            string dateTwo = Console.ReadLine();
+
+            DateTime secondDate = DateTime.Parse(dateTwo);
+
+
+
+            TimeSpan difference = (secondDate - firstDate);
+
+            Console.WriteLine(difference.Days + " days");
+        }
+    }
+}
